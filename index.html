@@ -1,237 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apex Kitchen - Nigerian Fresh Meals</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apex Kitchen - Nigerian Fresh Meals</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="logo">Apex Kitchen</div>
+    </header>
 
-  <nav>
-    <div class="nav-container">
-      <div class="logo">🍲 Apex Kitchen</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#order">Order</a></li>
-        <li><a href="#cart">Cart</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header>
-    <h1>Welcome to Apex Kitchen</h1>
-    <p><em>"We Serve Your Cravings"</em></p>
-    <p>Fresh Nigerian meals delivered daily.</p>
-    <img src="main.jpg" alt="Delicious Nigerian Meals">
-  </header>
-
-  <section id="home">
-    <h2>Home</h2>
-    <p>Welcome to <strong>Apex Kitchen</strong>, your one-stop<br>
-       spot for authentic Nigerian dishes like Jollof Rice,<br>
-       Egusi Soup, Suya, Puff-Puff, and more. We cook each meal<br>
-       with care and fresh ingredients, bringing the taste of Nigeria straight to your table.</p>
-    <img src="main 2.jpg" alt="Nigerian Food Variety">
-  </section>
-
-<section id="menu">
-  <h2> Menu</h2>
-  <div class="food-section">
-    <div class="food-item">
-      <h3>Jollof Rice</h3>
-      <img src="img3.jpg" alt="Plate of Jollof Rice">
-      <details>
-        <summary>View</summary>
-        <p>Smoky party-style Jollof Rice cooked with tomato sauce and spices. Served with chicken or beef. ₦3500</p>
-      </details>
-      <a href="#order">Order Now</a>
-    </div>
-
-    <div class="food-item">
-      <h3>Egusi Soup</h3>
-      <img src="egu 4.jpg" alt="Egusi Soup with pounded yam">
-      <details>
-        <summary>View</summary>
-        <p>Classic Nigerian Egusi Soup with melon seeds, vegetables, and assorted meat. Best with pounded yam. ₦4000</p>
-      </details>
-      <a href="#order">Order Now</a>
-    </div>
-
-    <div class="food-item">
-      <h3>Suya</h3>
-      <img src="IMG 5.jpg" alt="Nigerian Suya Skewers">
-      <details>
-        <summary>View</summary>
-        <p>Grilled spicy beef skewers coated with yaji spice mix. ₦2500</p>
-      </details>
-      <a href="#order">Order Now</a>
-    </div>
-
-    <div class="food-item">
-      <h3>Puff-Puff</h3>
-      <img src="puf 6.jpg" alt="Nigerian Puff Puff snack">
-      <details>
-        <summary>View</summary>
-        <p>Sweet, fluffy fried dough balls. ₦1000</p>
-      </details>
-      <a href="#order">Order Now</a>
-    </div>
-
-    <div class="food-item">
-      <h3>Efo Riro</h3>
-      <img src="efo 7.jpg" alt="Yoruba Efo Riro Dish">
-      <details>
-        <summary>View</summary>
-        <p>Yoruba delicacy with spinach, peppers, and spices. Served with rice or amala. ₦3500</p>
-      </details>
-      <a href="#order">Order Now</a>
-    </div>
-  </div>
-  </section>
-
-  <section id="order">
-    <h2>Place Your Order</h2>
-    <form>
-      <label for="meal">Choose Your Meals:</label>
-      <select id="meal" name="meal" multiple required>
-        <option value="jollof">Jollof Rice</option>
-        <option value="egusi">Egusi Soup</option>
-        <option value="suya">Suya</option>
-        <option value="puff">Puff-Puff</option>
-        <option value="efo">Efo Riro</option>
-      </select>
-      <small>Hold CTRL (Windows) or CMD (Mac) to select more than one</small>
-
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
-
-      <label for="address">Delivery Address:</label>
-      <input type="text" id="address" name="address" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <button type="submit">Order Now ✅</button>
-    </form>
-  </section>
-
-  <section id="cart">
-    <h2>Your Cart</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Qty</th>
-          <th>Price</th>
-          <th>Total</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody id="cart-items"></tbody>
-    </table>
-    <p id="cart-total">Total: ₦0</p>
-    <button>Checkout</button>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <div class="about-content">
-      <img src="kkk-removebg-preview.png" alt="Apex Kitchen Team">
-      <div class="about-text">
-        <p>
-          Welcome to <strong>Apex Kitchen</strong>, your home of tasty meals in Calabar, Cross River State. <br>
-          We serve Nigerian favorites like Jollof Rice, soups, and stews — all cooked with love and care. <br>
-          Whether you dine in, take out, or order delivery, every bite is meant to feel like home. <br>
-          Whatever your craving, Apex Kitchen is here to satisfy it with flavor and warmth.
-        </p>
+    <nav>
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#order">Order</a></li>
+          <li><a href="#cart">Cart</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Phone: +234 708 928 5842</p>
-    <p>📧 Email: apexkitchen@gmail.com</p>
-    <p>📍 Location: Calabar, Cross River State, Nigeria</p>
+    <header>
+      <h1>Welcome to Apex Kitchen</h1>
+      <p><em>"We Serve Your Cravings"</em></p>
+      <p>Fresh Nigerian meals delivered daily.</p>
+      <img src="main.jpg" alt="Delicious Nigerian Meals" />
+    </header>
 
-    <div class="social-links">
-      <a href="https://tiktok.com/YourPage" target="_blank">TikTok</a> 
-      <a href="https://www.instagram.com/YourPage" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/YourPage" target="_blank">Facebook</a> 
-      <a href="https://www.twitter.com/YourPage" target="_blank">Twitter</a>
-    </div>
+    <section id="home">
+      <h2>Home</h2>
+      <p>
+        Welcome to <strong>Apex Kitchen</strong>, your one-stop
+        spot for authentic Nigerian dishes like Jollof Rice,
+        Egusi Soup, Suya, Puff-Puff, and more. We cook each meal
+        with care and fresh ingredients, bringing the taste of Nigeria straight
+        to your table.
+      </p>
+      <img src="img 1k.jpg" alt="Nigerian Food Variety" />
+    </section>
 
-    <div class="social-icons">
-      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#"><i class="fa-brands fa-twitter"></i></a>
-    </div>
-  </section>
+    <section id="menu">
+      <h2>Menu</h2>
+      <div class="food-section">
+        <div class="food-item">
+          <h3>Jollof Rice</h3>
+          <img src="img3.jpg" alt="Plate of Jollof Rice" />
+          <details>
+            <summary>View</summary>
+            <p>Smoky party-style Jollof Rice cooked with tomato sauce and spices. Served with chicken or beef. ₦3500</p>
+          </details>
+          <a href="#order">Order Now</a>
+        </div>
+        <div class="food-item">
+          <h3>Egusi Soup</h3>
+          <img src="egu 4.jpg" alt="Egusi Soup with pounded yam" />
+          <details>
+            <summary>View</summary>
+            <p>Classic Nigerian Egusi Soup with melon seeds, vegetables, and assorted meat. Best with pounded yam. ₦4000</p>
+          </details>
+          <a href="#order">Order Now</a>
+        </div>
+        <div class="food-item">
+          <h3>Suya</h3>
+          <img src="IMG 5.jpg" alt="Nigerian Suya Skewers" />
+          <details>
+            <summary>View</summary>
+            <p>Grilled spicy beef skewers coated with yaji spice mix. ₦2500</p>
+          </details>
+          <a href="#order">Order Now</a>
+        </div>
+        <div class="food-item">
+          <h3>Puff-Puff</h3>
+          <img src="puf 6.jpg" alt="Nigerian Puff Puff snack" />
+          <details>
+            <summary>View</summary>
+            <p>Sweet, fluffy fried dough balls. ₦1000</p>
+          </details>
+          <a href="#order">Order Now</a>
+        </div>
+        <div class="food-item">
+          <h3>Efo Riro</h3>
+          <img src="efo 7.jpg" alt="Yoruba Efo Riro Dish" />
+          <details>
+            <summary>View</summary>
+            <p>Yoruba delicacy with spinach, peppers, and spices. Served with rice or amala. ₦3500</p>
+          </details>
+          <a href="#order">Order Now</a>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Apex Kitchen. All Rights Reserved.</p>
-  </footer>
+    <section id="order">
+      <h2>Place Your Order</h2>
+      <form>
+        <label for="meal">Choose Your Meals:</label>
+        <select id="meal" name="meal" multiple required>
+          <option value="jollof">Jollof Rice</option>
+          <option value="egusi">Egusi Soup</option>
+          <option value="suya">Suya</option>
+          <option value="puff">Puff-Puff</option>
+          <option value="efo">Efo Riro</option>
+        </select>
+        <small>Hold CTRL (Windows) or CMD (Mac) to select more than one</small>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" />
+        <label for="address">Delivery Address:</label>
+        <input type="text" id="address" name="address" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <button type="submit">Order Now</button>
+      </form>
+    </section>
 
-<script>
-  const mealPrices = {
-    jollof: 3500,
-    egusi: 4000,
-    suya: 2500,
-    puff: 1000,
-    efo: 3500
-  };
+    <section id="cart">
+      <h2>Your Cart</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+      <p id="cart-total">Total: ₦0</p>
+      <button>Checkout</button>
+    </section>
 
-  const form = document.querySelector("#order form");
-  const cartItems = document.querySelector("#cart-items");
-  const cartTotal = document.querySelector("#cart-total");
-  let totalAmount = 0;
+    <section id="about">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <img src="kkk-removebg-preview-removebg-preview-removebg-preview.png" alt="Apex Kitchen Team" />
+        <div class="about-text">
+          <p>
+            Welcome to <strong>Apex Kitchen</strong>, your home of tasty meals
+            in Calabar, Cross River State. We serve Nigerian favorites like Jollof Rice, soups, and stews — all
+            cooked with love and care. Whether you dine in, take out, or order delivery, every bite is
+            meant to feel like home. Apex Kitchen is here to satisfy it with flavor and warmth.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Phone: +234 708 928 5842</p>
+      <p>Email: apexkitchen@gmail.com</p>
+      <p>Location: Calabar, Cross River State, Nigeria</p>
+      <div class="social-links">
+        <a href="#">TikTok</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </section>
 
-    const selectedMeals = Array.from(document.getElementById("meal").selectedOptions);
-    const quantity = parseInt(document.getElementById("quantity").value);
+    <footer>
+      <p>© 2025 Apex Kitchen. All Rights Reserved.</p>
+    </footer>
 
-    if (selectedMeals.length === 0 || quantity < 1) {
-      alert("Please select at least one meal and valid quantity!");
-      return;
-    }
+    <script>
+      // Highlight active nav link while scrolling
+      const navLinks = document.querySelectorAll('.nav-links a');
+      const sections = document.querySelectorAll('section');
 
-    selectedMeals.forEach(option => {
-      const meal = option.value;
-      const price = mealPrices[meal];
-      const itemTotal = price * quantity;
-
-      const row = document.createElement("tr");
-      row.innerHTML = `
-        <td>${option.text}</td>
-        <td>${quantity}</td>
-        <td>₦${price}</td>
-        <td>₦${itemTotal}</td>
-        <td><button class="remove-btn">Remove</button></td>
-      `;
-      cartItems.appendChild(row);
-
-      totalAmount += itemTotal;
-      cartTotal.textContent = "Total: ₦" + totalAmount;
-
-      row.querySelector(".remove-btn").addEventListener("click", function () {
-        row.remove();
-        totalAmount -= itemTotal;
-        cartTotal.textContent = "Total: ₦" + totalAmount;
+      window.addEventListener('scroll', () => {
+        let scrollPosition = window.scrollY + 200;
+        sections.forEach(section => {
+          if(scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const currentLink = document.querySelector(`.nav-links a[href="#${section.id}"]`);
+            if(currentLink) currentLink.classList.add('active');
+          }
+        });
       });
-    });
-
-    form.reset();
-    document.querySelector("#cart").scrollIntoView({ behavior: "smooth" });
-  });
-</script>
-
-</body>
+    </script>
+  </body>
 </html>
